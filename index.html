@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/myindex.less">
+    <script type="text/javascript" src="./lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header id="header" class="row">
+    <a href="javascript:;" class="logotext col-xs-9 col-sm-9 col-md-9 ">
+        <img src="images/header_logo.png"/>
+    </a>
+    <a href="javascript:;" class="appload col-xs-3 col-sm-3 col-md-3">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</header>
+<!--搜索-->
+<section id="search">
+    <input type="text" name="" placeholder="please input you wanted" id="txt"/>
+    <input type="button" value="search" id="btn"/>
+</section>
+<!--菜单-->
+<section id="menu" class="container">
+
+</section>
+<!--商品推荐-->
+<section id="recommen" class="container">
+    <div class="row">
+        <span class="sailText col-xs-10 col-sm-10 col-md-10">超值折扣推荐</span>
+        <span class="zuo col-xs-2 col-sm-2 col-md-2"></span>
+    </div>
+
+</section>
+<!--底部-->
+<section id="footer">
+    <div class="media">
+        <div class="media-left ">
+            <a href="javascript:;" class="mmp-img">
+                <img class="media-object  " src="images/ic_temai.png" alt="...">
+            </a>
+        </div>
+        <div class="media-body detailText">
+            <span class="media-heading">移动端商品：酱油1.28L</span>
+            <span class="price">10.9元</span>
+            <div class="ding">
+                <span>天猫商城</span>
+                <span>时间：10-10 10:45</span>
+                <span class="messageBox">2</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="clickmore">
+    <a href="javascript:;" id="getmore">更多优惠信息 <span class="glyphicon glyphicon-chevron-right"></span></a>
+</section>
+<section id="rank">
+    <span>品牌排行</span>
+    <span class="glyphicon glyphicon-th-large icon-more"></span>
+</section>
+<div id="end">
+    <div class="tool clearfix">
+        <button type="button" class="login">登录</button>
+        <button type="button" class="new">注册</button>
+        <button type="button" class="top" id="toTop">返回顶部</button>
+    </div>
+    <div class="company">
+        <span class="red">手机app下载</span>
+        <span class="black">慢慢买手机版</span>
+        <span>------掌上比价平台</span>
+        <div class="www">
+            <span>m.manmanbuy.com</span>
+        </div>
+    </div>
+</div>
+
+
+<!--js文件 注意引入的依赖关系-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="lib/template.js"></script>
+<script type="text/html" id="template">
+    <div class="row">
+        {{each result as value i}}
+        <a href="{{if i!=7}}{{value.href}}{{/if}}{{if i==7}}javascript:;{{/if}}" class="tbiao col-xs-3 col-md-3 col-md-3 {{if i>=8}}more{{/if}}  {{if i==7}}addmore{{/if}}" >
+            {{#value.img}}
+            <p>{{value.name}}</p>
+        </a>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="detail_template">
+    {{each result as value}}
+    <div  class="media">
+        <div class="media-left ">
+            <a href="javascript:;" class="mmp-img">
+                <div class="media-object">
+                    {{#value.productImgSm}}
+                </div>
+            </a>
+        </div>
+        <div class="media-body detailText">
+            <span class="media-heading">{{value.productName}}</span>
+            <span class="price">{{value.productPinkage}}</span>
+            <div class="ding">
+                <span>{{value.productFrom}}</span>
+                <span>{{value.productTime}}</span>
+                <span class="glyphicon glyphicon-comment">{{value.productComCount}}</span>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+</script>
+</body>
+</html>

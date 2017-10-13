@@ -1,0 +1,26 @@
+#product_detail {
+  width: 100%;
+}
+#product_detail .nav-tabs {
+  width: 100%;
+}
+#product_detail .nav-tabs li {
+  width: 33%;
+  text-align: center;
+  background: linear-gradient(to bottom, orange, orangered);
+}
+#product_detail .nav-tabs li a {
+  background: linear-gradient(to bottom, orange, orangered);
+}
+#product_detail .nav-tabs li a:hover {
+  background: linear-gradient(to bottom, #fff42d, #ffa50d) !important;
+}
+#check_more {
+  width: 100%;
+}
+#check_more button {
+  width: 100%;
+  font: 400 16px/30px "Microsoft YaHei";
+  color: #000;
+  background: linear-gradient(to bottom, #f0f1ef, #b5b5b5) !important;
+}

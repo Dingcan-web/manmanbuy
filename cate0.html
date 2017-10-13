@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/commen.less">
+    <link rel="stylesheet/less" href="./css/bijia.less"/>
+    <script type="text/javascript" src="./lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header id="header" class="row">
+
+    <a href="javascript:;" class="logotext col-xs-9 col-sm-9 col-md-9 ">
+        <img src="images/header_logo.png"/>
+    </a>
+    <a href="javascript:;" class="appload col-xs-3 col-sm-3 col-md-3">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</header>
+<section id="search">
+    <input type="text" name="" placeholder="please input you wanted" id="txt"/>
+    <input type="button" value="search" id="btn"/>
+</section>
+
+
+
+
+<!--end-->
+<div id="end">
+    <div class="tool clearfix">
+        <button type="button" class="login">登录</button>
+        <button type="button" class="new">注册</button>
+        <button type="button" class="top" id="toTop">返回顶部</button>
+    </div>
+    <div class="company">
+        <span class="red">手机app下载</span>
+        <span class="black">慢慢买手机版</span>
+        <span>------掌上比价平台</span>
+        <div class="www">
+            <span>m.manmanbuy.com</span>
+        </div>
+    </div>
+</div>
+
+
+<!--js文件 注意引入的依赖关系-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/bijia.js"></script>
+<script src="lib/template.js"></script>
+
+</body>
+</html>

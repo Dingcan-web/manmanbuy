@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/commen.less">
+    <link rel="stylesheet/less" href="./css/product.less"/>
+    <script type="text/javascript" src="./lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header id="header" class="row">
+
+    <a href="javascript:;" class="logotext col-xs-9 col-sm-9 col-md-9 ">
+        <img src="images/header_logo.png"/>
+    </a>
+    <a href="javascript:;" class="appload col-xs-3 col-sm-3 col-md-3">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</header>
+<section id="search">
+    <input type="text" name="" placeholder="please input you wanted" id="txt"/>
+    <input type="button" value="search" id="btn"/>
+</section>
+
+<div class="filter">
+    <a href="index.html">首页</a>
+    <span class="glyphicon glyphicon-menu-right"></span>
+    <a href="bijia.html">全部分类</a>
+    <span class="glyphicon glyphicon-menu-right"></span>
+    <a class="categoryId"></a>
+</div>
+<div id="productid">
+
+</div>
+<div id="addmore">
+    <input type="button" value="上一页" id="up"/>
+    <select id="select_txt"></select>
+    <input type="button" id="down" value="下一页"/>
+</div>
+
+<!--end-->
+<div id="end">
+    <div class="tool clearfix">
+        <button type="button" class="login">登录</button>
+        <button type="button" class="new">注册</button>
+        <button type="button" class="top" id="toTop">返回顶部</button>
+    </div>
+    <div class="company">
+        <span class="red">手机app下载</span>
+        <span class="black">慢慢买手机版</span>
+        <span>------掌上比价平台</span>
+        <div class="www">
+            <span>m.manmanbuy.com</span>
+        </div>
+    </div>
+</div>
+
+
+<!--js文件 注意引入的依赖关系-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/product.js"></script>
+<script src="lib/template.js"></script>
+<script type="text/html" id="product_template">
+    {{each result as e i}}
+    <div class="media">
+        <div class="media-left product_img">
+            <a href="productDetail.html?productId={{e.productListId}}&categoryId={{e.categoryId}}">
+                {{#e.productImg}}
+            </a>
+        </div>
+        <div class="media-body product_text">
+            <a href="productDetail.html?productId={{e.productListId}}&categoryId={{e.categoryId}}" class="media-heading">{{e.productName}}</a>
+            <div class="product_price">{{e.productPrice}}</div>
+            <div class="product_qita">
+                <a href="javascript:;" class="product_baojia">{{e.productQuote}}</a>
+                <a href="javascript:;" class="product_comment">评论（{{e.productCom | getNum}}）</a>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+</script>
+</body>
+</html>

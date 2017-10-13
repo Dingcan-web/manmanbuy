@@ -1,0 +1,193 @@
+html {
+  width: 100%;
+}
+html body {
+  width: 100%;
+}
+html body #header {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: orange;
+}
+html body #header .logotext {
+  float: left;
+}
+html body #header .logotext img {
+  height: 25px;
+}
+html body #header .appload {
+  float: right;
+  text-align: end;
+}
+html body #header .appload img {
+  height: 25px;
+}
+html body #search {
+  height: 60px;
+  background-color: #e8e8e8;
+  text-align: center;
+  padding: 5px;
+}
+html body #search #txt {
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px;
+  outline-style: none;
+  border: 0;
+}
+html body #search #btn {
+  background-color: orange;
+  font-weight: 700;
+  font-size: 18px;
+  height: 100%;
+  width: 15%;
+  border-radius: 10px;
+  border: 0;
+}
+html body #recommen {
+  width: 100%;
+  height: 50px;
+  background-color: #eac311;
+  color: #fff;
+}
+html body #recommen #menu {
+  width: 100%;
+  padding: 5px;
+}
+html body #recommen #menu div .tbiao {
+  color: #666;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+html body #recommen #menu div .tbiao.more {
+  display: none;
+}
+html body #recommen #menu div .tbiao img {
+  width: 50%;
+  margin: 5px;
+}
+html body #recommen #menu div a:hover {
+  color: #666;
+}
+html body #recommen .sailText {
+  font: 500 16px/50px "Microsoft YaHei";
+  float: left;
+  padding: 0 10px;
+}
+html body #recommen .zuo {
+  width: 25px;
+  height: 25px;
+  margin: 12px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: url("../images/icon_bar.png") 209px 17px;
+}
+html body #footer {
+  width: 100%;
+  background-color: white;
+}
+html body #footer .media {
+  border-top: 1px solid #cccccc;
+  display: block;
+}
+html body #footer .mmp-img {
+  display: block;
+}
+html body #footer .mmp-img img {
+  width: 150px;
+}
+html body #footer .detailText {
+  padding: 10px 0;
+  color: #666;
+  position: relative;
+}
+html body #footer .detailText h4 {
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+}
+html body #footer .detailText .price {
+  color: red;
+}
+html body #footer .detailText .ding {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+html body #footer .detailText .ding .messageBox {
+  width: 35px;
+  height: 24px;
+  float: right;
+  text-align: end;
+  margin-right: 10px;
+  background: url("../images/icon_bar.png") -99px -54px;
+  background-size: 220px 132px;
+}
+html body #clickmore {
+  width: 100%;
+  text-align: center;
+}
+html body #clickmore a {
+  text-align: center;
+  font: 500 16px/50px "Microsoft YaHei";
+  color: #666;
+  display: block;
+  border: 1px solid #ccc;
+}
+html body #clickmore a span {
+  font-size: 16px;
+}
+html body #rank {
+  width: 100%;
+  background-color: orange;
+  height: 50px;
+}
+html body #rank span {
+  text-align: start;
+  float: left;
+  font: 500 16px/40px "Microsoft YaHei";
+  display: block;
+  padding: 5px;
+  color: #fff;
+}
+html body #rank .icon-more {
+  float: right;
+  padding: 5px;
+  font-size: 28px;
+}
+html body #end {
+  width: 100%;
+  background-color: #e9e9e9;
+}
+html body #end .tool {
+  margin-top: 20px;
+}
+html body #end .tool button {
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+  border-bottom: 1px solid #666;
+  float: left;
+  width: 30%;
+  font: 700 14px/30px "Microsoft YaHei";
+  color: #666666;
+  text-align: center;
+}
+html body #end .tool button.top {
+  width: 40%;
+  border-right: 1px solid #666;
+}
+html body #end .company {
+  padding: 20px;
+  text-align: center;
+  font: 500 16px/20px "Microsoft YaHei";
+  color: #666666;
+}
+html body #end .company .red {
+  color: red;
+}
+html body #end .company .black {
+  color: #000;
+}

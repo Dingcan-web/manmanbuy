@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/base.less">
+    <link rel="stylesheet/less" href="./css/commen.less">
+    <link rel="stylesheet/less" href="./css/bijia.less"/>
+    <script type="text/javascript" src="./lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header id="header" class="row">
+
+    <a href="javascript:;" class="logotext col-xs-9 col-sm-9 col-md-9 ">
+        <img src="images/header_logo.png"/>
+    </a>
+    <a href="javascript:;" class="appload col-xs-3 col-sm-3 col-md-3">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</header>
+<section id="search">
+    <input type="text" name="" placeholder="please input you wanted" id="txt"/>
+    <input type="button" value="search" id="btn"/>
+</section>
+
+<section id="bijiao_menu"></section>
+<!--end-->
+<div id="end">
+    <div class="tool clearfix">
+        <button type="button" class="login">登录</button>
+        <button type="button" class="new">注册</button>
+        <button type="button" class="top" id="toTop">返回顶部</button>
+    </div>
+    <div class="company">
+        <span class="red">手机app下载</span>
+        <span class="black">慢慢买手机版</span>
+        <span>------掌上比价平台</span>
+        <div class="www">
+            <span>m.manmanbuy.com</span>
+        </div>
+    </div>
+</div>
+
+
+<!--js文件 注意引入的依赖关系-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/bijia.js"></script>
+<script src="lib/template.js"></script>
+<script type="text/html" id="menu">
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        {{each result as e i}}
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a data-id='{{e.titleId}}' class="menu-id" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{e.titleId}}" aria-expanded="true" aria-controls="collapseOne">
+                        {{e.title}}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse{{e.titleId}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading{{e.collapseIndex}}">
+
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script type="text/html" id="table-menu">
+    <div class="container-fluid panel-body">
+        <div class="row">
+            {{each result as e i}}
+            <a href="product.html?categoryId={{e.categoryId}}" data-categoryId="" class="table-each col-xs-4 col-md-4 col-sm-4 col-lg-4">{{e.category}}</a>
+            {{/each}}
+        </div>
+    </div>
+</script>
+</body>
+</html>

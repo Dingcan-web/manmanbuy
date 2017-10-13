@@ -1,0 +1,54 @@
+.filter {
+  color: #757575;
+  font: 600 16px/30px "Microsoft YaHei";
+  background-color: #eaeaea;
+}
+.filter a {
+  color: #757575;
+}
+#productid {
+  border-bottom: 1px solid #cccccc;
+  padding: 5px;
+  color: #666666;
+}
+#productid .product_img img {
+  width: 130px;
+  padding: 10px;
+  vertical-align: middle;
+}
+#productid .product_text a {
+  font: 600 16px/30px "Microsoft YaHei";
+  color: #333;
+}
+#productid .product_text a:hover {
+  color: #333;
+}
+#productid .product_text .product_price {
+  color: orangered;
+}
+#productid .product_text .product_qita {
+  color: #a4a4a4;
+}
+#productid .product_text .product_qita .product_baojia {
+  padding: 10px 5px;
+  font: 400 12px/30px "Microsoft YaHei";
+  color: #555;
+}
+#productid .product_text .product_qita .product_comment {
+  padding: 10px 5px;
+  font: 400 12px/30px "Microsoft YaHei";
+  color: #555;
+}
+#addmore {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+#addmore input,
+#addmore #select_txt {
+  background-color: #cccccc;
+  font: 500 16px/20px "Microsoft YaHei";
+  width: 23%;
+  box-sizing: border-box;
+  border: 0;
+}
